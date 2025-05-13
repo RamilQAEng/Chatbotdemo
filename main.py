@@ -5,6 +5,11 @@ import os
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
 
+if not os.path.exists("faiss_index/index.faiss"):
+    import ingest
+    ingest.ingest()
+
+
 st.set_page_config(page_title="Чат-бот QubitAI", layout="wide")
 
 
