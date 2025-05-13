@@ -9,8 +9,6 @@ build/
 .venv/
 venv/
 db/
-data/
-faiss_index/
 
 
 # Streamlit
