@@ -1,5 +1,5 @@
 import streamlit as st
-from app.qa_engine import ask_question
+from qa_engine import ask_question
 import uuid
 import os
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
@@ -9,7 +9,7 @@ st.set_page_config(page_title="Чат-бот QubitAI", layout="wide")
 
 
 # 💅 Подключаем кастомный стиль
-style_path = "app/styles.css"
+style_path = "styles.css"
 with open(style_path) as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
@@ -35,7 +35,7 @@ if "active_chat" not in st.session_state or st.session_state["active_chat"] not 
 st.sidebar.title("💬 Ваши чаты")
 
 # Кнопка: Новый чат
-if st.sidebar.button("➕ Новый чат"):
+if st.sidebar.button("Новый чат"):
     if len(st.session_state["chats"]) >= 3:
         oldest_chat = list(st.session_state["chats"].keys())[0]
         del st.session_state["chats"][oldest_chat]

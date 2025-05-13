@@ -1,7 +1,8 @@
 streamlit
-chromadb
-PyPDF2
 openai
-tqdm
-python-dotenv
 langchain
+langchain-community
+faiss-cpu
+sentence-transformers
+PyPDF2
+tqdm
