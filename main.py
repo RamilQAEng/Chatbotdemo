@@ -17,7 +17,7 @@ if not os.path.exists("faiss_index/index.faiss"):
 st.set_page_config(page_title="Чат-бот QubitAI", layout="wide")
 
 
-# 💅 Подключаем кастомный стиль
+#  Подключаем кастомный стиль
 style_path = "styles.css"
 with open(style_path) as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
