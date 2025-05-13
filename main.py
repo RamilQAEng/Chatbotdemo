@@ -4,6 +4,10 @@ import uuid
 import os
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
+if not os.path.exists("faiss_index/index.faiss"):
+    import ingest
+    ingest.ingest()
+
 
 if not os.path.exists("faiss_index/index.faiss"):
     import ingest
