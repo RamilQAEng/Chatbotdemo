@@ -10,7 +10,8 @@ client = OpenAI(
 )
 
 MODEL = st.secrets.get("model_name", "mistralai/mistral-7b-instruct:free")
-SYSTEM_PROMPT = "Ты ИИ-ассистент QubitAI. Помоги пользователю разобраться в чат-ботах."
+with open("system_prompt.md", "r", encoding="utf-8") as f:
+    SYSTEM_PROMPT = f.read()
 
 FAISS_PATH = "faiss_index"
 
